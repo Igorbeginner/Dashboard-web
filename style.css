@@ -10,7 +10,8 @@
     --sidebar-color-dark: #060B28;
     --div-icons-color: #1B2143;
     /* cards */
-
+    --card-colot-light:#0B122E;
+    --card-colot-dark:#1B2646;
 }
 
 *{
@@ -20,13 +21,13 @@
 }
 
 h2{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
 }
 
 h6{
     font-size: 8px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 body{
@@ -81,50 +82,104 @@ gap: 15px;
 
 .dash {
     flex: 1; /* =ocupar toda o espaço livre | Junção do flex-grow, flex-shrink e fle-basis  */
-    border: 1px solid red;
     display: flex;
 }
 
 .dash .box1 {
-    width: 200px;
-    height: 420px;
+    width: 250px;
+    height: 540px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .dash .box1 .cards-info {
-    width: 180px;
-    height: 400px;
-    background: var(--div-icons-color);
+    width: 220px;
+    height: 520px;
+    background: linear-gradient(90deg, var(--sidebar-color-dark) 30%, rgba(4, 12, 41.5, 0.7 ) 50%);
+    border-radius: 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 
 .dash .box1 .cards-info .card1 {
-    width: 145px;
-    height: 50px;
+    width: 180px;
+    height: 70px;
+    border-radius: 12px;
+    box-shadow: none    ;
+background:
+    linear-gradient(
+        120deg,
+        transparent 58%,
+        rgba(255,255,255,0.03) 59%,
+        rgba(255,255,255,0.03) 60%,
+        transparent 73%
+    ),
+
+    linear-gradient(
+        120deg,
+        rgba(255,255,255,0.03),
+        transparent 5%
+    ),
+
+    linear-gradient(
+        160deg,
+        #1C2643,
+        #0A112D
+    );
     display: flex;
-    border: 2px solid rgb(255, 0, 212);
 }
 
 .dash .box1 .cards-info .card1 .piece1 {
-    width: 95px;
+    width: 110px;
+    height: 70px;
+    color: var(--text-color);
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.dash .box1 .cards-info .card1 .piece2{
+    width: 74px;
+    height: 68px;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(0, 255, 26);
+    justify-content: center;
+    /* border: 1px solid rgb(255, 0, 25); */
 }
 
-.dash .box1 .cards-info .card1 .piece2{
-    width: 60px;
-    color: var(--text-color);
+/* Por fins estéticos, pedi para o chat fazer essa parte */
+.line-chart svg {
+    width: 45px;
+    height: 30px;
+    transform: scale(-1, -1)
+}
+
+.line-chart path {
+    fill: none;
+    stroke: white;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+/*  */
+
+.dash .box1 .cards-info .card1 .piece2 .icon {
+    width: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
-    border: 1px solid rgb(255, 0, 25);
+    /* border: 1px solid salmon; */
+}
+
+.dash .box1 .cards-info .card1 .piece2 .icon span {
+    font-size: 16px;
 }
