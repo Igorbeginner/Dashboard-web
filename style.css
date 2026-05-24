@@ -14,6 +14,7 @@
     /* cards */
     --card-colot-light:#0B122E;
     --card-colot-dark:#1B2646;
+    --trofeu-background: #0076FF;
 }
 
 *{
@@ -25,10 +26,11 @@
 h2{
     font-size: 24px;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 h3{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--text-color);
 }
@@ -36,6 +38,7 @@ h3{
 h6{
     font-size: 8px;
     font-weight: 300;
+    color: var(--text-color);
 }
 
 body{
@@ -145,7 +148,6 @@ background:
 .box1 .cards-info .card1 .piece1 {
     width: 143px;
     height: 70px;
-    color: var(--text-color);
     margin-left: 12px;
     display: flex;
     flex-direction: column;
@@ -253,8 +255,7 @@ background:
 .box2 .visao-geral .graphics .concluidos .atual canvas {
     .atual canvas {
     width: 100% !important;
-    height: 100% !important;
-}
+    height: 100% !important;}
 }
 
 .box2 .visao-geral .graphics .concluidos .atual .center-info {
@@ -294,5 +295,130 @@ background:
 .box2 .top3 {
     height: 255px;
     width: 530px;
-    border: 1px solid blueviolet;
+        background: linear-gradient(
+        130deg,
+        var(--sidebar-color-dark) 10%, 
+        rgb(8, 14, 47, 0.3) 70% 
+        );
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box2 .top3 .tittle {
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.box2 .top3 .align-info {
+    height: 215px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.box2 .top3 .info{
+    width: 100%;
+    display: flex;
+}
+
+.box2 .top3 .info .avatar {
+    width: 90px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.box2 .top3 .info .avatar img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.box2 .top3 .info .dados{
+    height: 55px;
+    width: 546px;
+        background: linear-gradient(
+        170deg,
+        var(--sidebar-color-dark) 50%, 
+        rgb(157, 166, 220, 0.1 ) 90% 
+        );
+        border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid fuchsia; */
+}
+
+.box2 .top3 .info .dados .nome {
+    width: 100%;
+    height: 10px;
+    padding-left: 19px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.box2 .top3 .info .dados .align-dados{
+    height: 100 ;
+    width: 380px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid yellow; */
+}
+
+
+.box2 .top3 .info .dados .align-dados .chamadas {
+    height: 10px;
+    width: 210px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid white ;
+}
+
+.box2 .top3 .info .dados .align-dados .percentil {
+    height:10px;
+    width: 110px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    /* border: 1px solid rgb(255, 25, 0); */
+}
+
+.box2 .top3 .info .dados .trofeu {
+    height: 40px;
+    width: 40px;
+    background: var(--trofeu-background);
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.box2 .top3 .info .dados .trofeu .ouro {
+    font-size: 25px;
+    color: #FFCA4D;
+}
+
+.box2 .top3 .info .dados .trofeu .prata {
+    font-size: 25px;
+    color: #E1DADE;
+}
+
+.box2 .top3 .info .dados .trofeu .bronze {
+    font-size: 25px;
+    color: darkgoldenrod;
 }
