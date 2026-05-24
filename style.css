@@ -200,15 +200,15 @@ background:
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .box2 .visao-geral {
     height: 250px;
     width: 559px;
     background: linear-gradient(
-        130deg,
-        var(--sidebar-color-dark) 10%, 
+        160deg,
+        var(--sidebar-color-dark) 25%, 
         rgb(8, 14, 47, 0.3) 70% 
         );
     border-radius: 12px;
@@ -242,21 +242,22 @@ background:
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid forestgreen;
+    /* border: 1px solid forestgreen; */
 }
 
 .box2 .visao-geral .graphics .concluidos .atual {
-    height: 140px;
-    width: 195px;
+    height: 115px;
+    width: 115px;
     position: relative;
-    border: 1px solid wheat;
+    border-radius: 50%;
+    background: #060B28
 }
 
 .box2 .visao-geral .graphics .concluidos .atual canvas {
-    .atual canvas {
     width: 100% !important;
-    height: 100% !important;}
+    height: 100% !important;
 }
+
 
 .box2 .visao-geral .graphics .concluidos .atual .center-info {
     position: absolute;
@@ -270,27 +271,56 @@ background:
 
 .box2 .visao-geral .graphics .concluidos .atual .center-info span {
     color: #00A67E;
-    font-size: 20px;
+    font-size: 19px;
+}
+
+.box2 .visao-geral .graphics .concluidos .atual .center-info.prazo span{
+    color: #0072F7;
 }
 
 .box2 .visao-geral .graphics .concluidos .atual .center-info h2 {
     margin: 0;
-    font-size: 38px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.box2 .visao-geral .graphics .concluidos .atual     .center-info p {
+.box2 .visao-geral .graphics .concluidos .atual .center-info p {
     margin: 0;
-    font-size: 12px;
+    font-size: 9px;
     opacity: 0.7;
 }
 
 
 .box2 .visao-geral .graphics .concluidos .anterior {
-    height: 80px;
-    width: 195px;
-    border: 1px solid rebeccapurple;
+    height: 60px;
+    width: 145px;
+    border-radius: 12px;
+    background: linear-gradient(
+        160deg,
+        #07102c,
+        rgb(16, 25, 54, 0.5)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
 }
 
+.box2 .visao-geral .graphics .concluidos .anterior canvas {
+    width: 65px !important;
+    height: 40px !important;
+}
+
+.box2 .visao-geral .graphics .concluidos .anterior .mini-text p {
+    font-size: 8px;
+    color: rgba(255,255,255,0.45);
+}
+
+.box2 .visao-geral .graphics .concluidos .anterior .mini-text h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
 
 .box2 .top3 {
     height: 255px;
@@ -307,7 +337,7 @@ background:
 }
 
 .box2 .top3 .tittle {
-    height: 40px;
+    height: 30px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -315,7 +345,7 @@ background:
 }
 
 .box2 .top3 .align-info {
-    height: 215px;
+    height: 225px;
     width: 530px;
     display: flex;
     flex-direction: column;
@@ -328,7 +358,7 @@ background:
 }
 
 .box2 .top3 .info .avatar {
-    width: 90px;
+    width: 80px;
     display: flex;
     justify-content:center ;
     align-items: center;
@@ -342,7 +372,7 @@ background:
 
 .box2 .top3 .info .dados{
     height: 55px;
-    width: 546px;
+    width: 430px;
         background: linear-gradient(
         170deg,
         var(--sidebar-color-dark) 50%, 
@@ -359,7 +389,7 @@ background:
 .box2 .top3 .info .dados .nome {
     width: 100%;
     height: 10px;
-    padding-left: 19px;
+    padding-left: 14px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -379,7 +409,7 @@ background:
 
 .box2 .top3 .info .dados .align-dados .chamadas {
     height: 10px;
-    width: 210px;
+    width: 220px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -420,5 +450,5 @@ background:
 
 .box2 .top3 .info .dados .trofeu .bronze {
     font-size: 25px;
-    color: darkgoldenrod;
+    color: #e89168;
 }
