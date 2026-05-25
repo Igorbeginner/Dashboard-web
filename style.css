@@ -540,11 +540,15 @@ background:
 }
 
 .canto-inferior{
-    border: 1px solid brown;
+    height: 440px;
+    width: 1140px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* border: 1px solid brown; */
 }
 
 .box3 {
-    height: 445px;
+    height: 440px;
     width: 780px;
     display: flex   ;
     flex-direction: column;
@@ -629,4 +633,38 @@ background:
     display: block;
     font-size: 15px;
     opacity: 1;
+}
+
+.box4{
+    height: 440px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid whitesmoke; */
+}
+
+.box4 .volume-chamadas {
+    height: 420px;
+    width: 360px;
+    background: linear-gradient( 130deg ,
+    var(--card-color-dark)35%,
+    var(--card-color-gradient)100%);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid snow; */
+}
+
+
+.box4 .volume-chamadas .graphics {
+    height: 380px;
+    width: 100%;
+    padding: 0 18px 18px;
+}
+
+#volume-chamadas-chart {
+    width: 100%;
+    height: 100%;
 }

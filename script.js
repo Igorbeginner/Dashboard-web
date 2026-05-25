@@ -290,3 +290,86 @@ new Chart(chamadasHora, {
         }
     }
 });
+
+
+const volumeChamadas = document.getElementById('volume-chamadas-chart');
+const ctxVolume = volumeChamadas.getContext('2d');
+
+const dias = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'];
+const horas = ['07h','08h','09h','10h','11h','12h','13h','14h','15h','16h','17h','18h'];
+
+function drawHeatmap() {
+    const w = volumeChamadas.width = volumeChamadas.offsetWidth;
+    const h = volumeChamadas.height = volumeChamadas.offsetHeight;
+
+    const paddingTop = 35;
+    const paddingLeft = 48;
+    const cellW = (w - paddingLeft) / dias.length;
+    const cellH = (h - paddingTop) / horas.length;
+
+    ctxVolume.clearRect(0, 0, w, h);
+
+    // Fundo gradiente contínuo (efeito da referência)
+    const gradient = ctxVolume.createRadialGradient(
+        paddingLeft + (w - paddingLeft) * 0.48,
+        paddingTop + (h - paddingTop) * 0.55,
+        25,
+        paddingLeft + (w - paddingLeft) * 0.48,
+        paddingTop + (h - paddingTop) * 0.55,
+        230
+    );
+
+    gradient.addColorStop(0, 'rgba(70, 65, 255, 0.78)');
+    gradient.addColorStop(0.38, 'rgba(95, 115, 255, 0.62)');
+    gradient.addColorStop(0.72, 'rgba(135, 165, 255, 0.70)');
+    gradient.addColorStop(1, 'rgba(185, 205, 255, 0.88)');
+    ctxVolume.fillStyle = gradient;
+    ctxVolume.fillRect(paddingLeft, paddingTop, w - paddingLeft, h - paddingTop);
+
+    // Grade
+    ctxVolume.strokeStyle = 'rgba(30,55,120,.28)';
+    ctxVolume.lineWidth = 1;
+
+    for (let i = 0; i <= dias.length; i++) {
+        const x = paddingLeft + i * cellW;
+        ctxVolume.beginPath();
+        ctxVolume.moveTo(x, paddingTop);
+        ctxVolume.lineTo(x, h);
+        ctxVolume.stroke();
+    }
+
+    for (let i = 0; i <= horas.length; i++) {
+        const y = paddingTop + i * cellH;
+        ctxVolume.beginPath();
+        ctxVolume.moveTo(paddingLeft, y);
+        ctxVolume.lineTo(w, y);
+        ctxVolume.stroke();
+    }
+
+    // Dias
+    ctxVolume.fillStyle = '#fff';
+    ctxVolume.font = '600 12px Poppins';
+    ctxVolume.textAlign = 'center';
+
+    dias.forEach((dia, i) => {
+        ctxVolume.fillText(
+            dia,
+            paddingLeft + i * cellW + cellW / 2,
+            20
+        );
+    });
+
+    // Horas
+    ctxVolume.textAlign = 'right';
+
+    horas.forEach((hora, i) => {
+        ctxVolume.fillText(
+            hora,
+            35,
+            paddingTop + i * cellH + cellH / 1.5
+        );
+    });
+}
+
+drawHeatmap();
+window.addEventListener('resize', drawHeatmap);
