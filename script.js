@@ -208,3 +208,34 @@ new Chart(historicoChamadas, {
         }
     }]
 }); 
+
+
+const niveisChamados = document.getElementById('niveis-chamados');
+
+new Chart(niveisChamados, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [65, 25, 10],
+            backgroundColor: [
+                '#8B2CFF',
+                '#7A008B',
+                '#1839D8'
+            ],
+            borderWidth: 0,
+            cutout: '85 %',
+            borderRadius: 1,
+            spacing: 0
+        }]
+    },
+    options: {
+        responsive: false,
+        maintainAspectRatio: false,
+        rotation: -40,
+        circumference: 360,
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        }
+    }
+});
