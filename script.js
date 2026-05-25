@@ -134,3 +134,77 @@ new Chart(miniPrazo, {
         }
     }]
 });
+
+
+
+const historicoChamadas = document.getElementById('historico-chamadas');
+
+new Chart(historicoChamadas, {
+    type: 'bar',
+    data: {
+        labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+        datasets: [{
+            data: [2800, 3900, 4600, 5000, 6000, 7600, 8300, 8200, 5800, 4200, 6200, 3000],
+            backgroundColor: [
+                '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF',
+                '#0ADEFB', '#0ADEFB', '#FFFFFF', '#0ADEFB',
+                '#0ADEFB', '#FFFFFF', '#FFFFFF', '#FFFFFF'
+            ],
+            borderWidth: 0,
+            barThickness: 18
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        },
+        scales: {
+            x: {
+                grid: { display: false },
+                ticks: {
+                    color: '#FFFFFF',
+                    font: { size: 11 }
+                },
+                border: { color: '#FFFFFF' }
+            },
+            y: {
+                min: 1000,
+                max: 9000,
+                ticks: {
+                    stepSize: 1000,
+                    color: '#FFFFFF',
+                    font: { size: 8 },
+                    callback: value => value.toLocaleString('pt-BR')
+                },
+                grid: { display: false },
+                border: { display: false }
+            }
+        }
+    },
+    plugins: [{
+        id: 'mediaLine',
+        afterDatasetsDraw(chart) {
+            const { ctx, chartArea, scales } = chart;
+            const y = scales.y.getPixelForValue(5500);
+
+            ctx.save();
+
+            ctx.beginPath();
+            ctx.moveTo(chartArea.left, y);
+            ctx.lineTo(chartArea.right, y);
+            ctx.strokeStyle = '#0ADEFB';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = '600 12px Poppins';
+            ctx.textAlign = 'right';
+            ctx.fillText('Média', chartArea.right - 5, y - 8);
+
+            ctx.restore();
+        }
+    }]
+}); 

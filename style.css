@@ -12,14 +12,18 @@
     --sidebar-color-dark: #060B28;
     --div-icons-color: #1B2143;
     /* cards */
-    --card-colot-light:#0B122E;
-    --card-colot-dark:#1B2646;
+    --card-color-dark:#070d2d;
+    --card-color-gradient:rgb(8, 14, 47, 0.3);
     --trofeu-background: #0076FF;
+    --trofeu-ouro: #FFCA4D;
+    --trofeu-prata: #E1DADE;
+    --trofeu-bronze: #e89168;
 }
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
@@ -43,7 +47,11 @@ h6{
 
 body{
     min-height: 100vh;
-    background: linear-gradient( 40deg, #01143D 40%, #006CFA 58%, #001737 80%  );
+    background: linear-gradient( 
+        40deg, 
+        #01143D 40%, 
+        #006CFA 58%, 
+        #001737 80%  );
 }
 
 
@@ -56,7 +64,10 @@ body{
 .sidebar{
     min-height: 100%;
     width: 58px;
-    background: linear-gradient(91deg ,var(--sidebar-color-dark) 70%, rgb(0, 0, 0, 0) 90%);
+    background: linear-gradient(
+        91deg ,
+        var(--sidebar-color-dark) 70%, 
+        rgb(0, 0, 0, 0) 90%);
     margin-left: 10px;
     border-end-end-radius: 3px;
     display: flex;
@@ -94,13 +105,15 @@ gap: 15px;
 .dash {
     flex: 1; /* =ocupar toda o espaço livre | Junção do flex-grow, flex-shrink e fle-basis  */
     display: flex;
+    flex-wrap: wrap;
 }
 
 .box1 {
     width: 325px;
-    height: 540px;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     /* border: 2px solid white; */
 }
@@ -108,7 +121,9 @@ gap: 15px;
 .box1 .cards-info {
 width: 286px;
     height: 520px;
-    background: linear-gradient(90deg, var(--sidebar-color-dark) 30%, rgba(4, 12, 41.5, 0.7 ) 50%);
+    background: linear-gradient(90deg,
+    var(--card-color-dark) 30%,
+    rgba(4, 12, 41.5, 0.7 ) 50%);
     border-radius: 6%;
     display: flex;
     flex-direction: column;
@@ -196,11 +211,20 @@ background:
 
 .box2{
     height: 280px;
-    width: 1150px;
+    width: 1120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     /* border: 1px solid white; */
+}
+
+.tittle {
+    height: 40px;
+    width: 100%;
+    padding:10px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .box2 .visao-geral {
@@ -208,7 +232,7 @@ background:
     width: 559px;
     background: linear-gradient(
         160deg,
-        var(--sidebar-color-dark) 25%, 
+        var(--sidebar-color-dark) 30%, 
         rgb(8, 14, 47, 0.3) 70% 
         );
     border-radius: 12px;
@@ -218,13 +242,13 @@ background:
     /* border: 1px solid red; */
     }
 
-.box2 .visao-geral .tittle {
+/* .box2 .visao-geral .tittle {
     height: 40px;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    }
+    } */
 
 .box2 .visao-geral .graphics {
     min-width: 100%;
@@ -232,17 +256,15 @@ background:
     align-items: center;
     justify-content: space-evenly;
     flex: 1;
-    /* border: 1px solid red; */
 }
 
 .box2 .visao-geral .graphics .concluidos {
-    height: 220px;
+    height: 210px;
     width: 195px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* border: 1px solid forestgreen; */
 }
 
 .box2 .visao-geral .graphics .concluidos .atual {
@@ -250,7 +272,7 @@ background:
     width: 115px;
     position: relative;
     border-radius: 50%;
-    background: #060B28
+    background: #060B28;
 }
 
 .box2 .visao-geral .graphics .concluidos .atual canvas {
@@ -336,16 +358,9 @@ background:
     align-items: center;
 }
 
-.box2 .top3 .tittle {
-    height: 30px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 .box2 .top3 .align-info {
-    height: 225px;
+    height: 215px;
     width: 530px;
     display: flex;
     flex-direction: column;
@@ -389,7 +404,7 @@ background:
 .box2 .top3 .info .dados .nome {
     width: 100%;
     height: 10px;
-    padding-left: 14px;
+    padding: 0 0 10px 15px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -408,18 +423,19 @@ background:
 
 
 .box2 .top3 .info .dados .align-dados .chamadas {
-    height: 10px;
-    width: 220px;
-    padding: 10px;
+    height: 20px;
+    width: 245px;
+    padding: 0 10px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-right: 1px solid white ;
+    /* border: 1px solid red; */
 }
 
 .box2 .top3 .info .dados .align-dados .percentil {
     height:10px;
-    width: 110px;
+    width: 135px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -440,15 +456,49 @@ background:
 
 .box2 .top3 .info .dados .trofeu .ouro {
     font-size: 25px;
-    color: #FFCA4D;
+    color: var(--trofeu-ouro);
 }
 
 .box2 .top3 .info .dados .trofeu .prata {
     font-size: 25px;
-    color: #E1DADE;
+    color: var(--trofeu-prata);
 }
 
 .box2 .top3 .info .dados .trofeu .bronze {
     font-size: 25px;
-    color: #e89168;
+    color: var(--trofeu-bronze);
+}
+
+
+.box3 {
+    height: 260px;
+    width: 780px;
+    display: flex   ;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid wheat; */
+}
+
+.box3 .historico {
+    height: 240px;
+    width: 760px;
+    background: linear-gradient( 170deg ,
+    var(--card-color-dark),
+    var(--card-color-gradient));
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box3 .historico .graphics {
+    height: 180px;
+    width: 760px;
+    padding: 10px 20px;
+}
+
+.box3 .historico .graphics canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
