@@ -39,6 +39,12 @@ h3{
     color: var(--text-color);
 }
 
+h4{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
 h6{
     font-size: 8px;
     font-weight: 300;
@@ -105,7 +111,7 @@ gap: 15px;
 .dash {
     flex: 1; /* =ocupar toda o espaço livre | Junção do flex-grow, flex-shrink e fle-basis  */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .box1 {
@@ -119,8 +125,8 @@ gap: 15px;
 }
 
 .box1 .cards-info {
+    height: 490px;
     width: 286px;
-    height: 520px;
     background: linear-gradient(90deg,
     var(--card-color-dark) 30%,
     rgba(4, 12, 41.5, 0.7 ) 50%);
@@ -210,7 +216,7 @@ background:
 }
 
 .box1 .niveis {
-    height: 180px;
+    height: 200px;
     width: 286px;
     background: linear-gradient(
         150deg,
@@ -274,13 +280,19 @@ background:
     top: 28px;
 }
 
+.area-maior {
+    height: 729px;
+    width: 1134px;
+    /* border: 3px solid rgb(30, 152, 73); */
+}
+
 .box2{
     height: 280px;
     width: 1120px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 1px solid white; */
+    /* border: 2px solid rgb(217, 182, 41); */
 }
 
 .tittle {
@@ -290,6 +302,7 @@ background:
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    /* border: 1px solid red; */
 }
 
 .box2 .visao-geral {
@@ -306,14 +319,6 @@ background:
     align-items: center;
     /* border: 1px solid red; */
     }
-
-/* .box2 .visao-geral .tittle {
-    height: 40px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    } */
 
 .box2 .visao-geral .graphics {
     min-width: 100%;
@@ -534,19 +539,22 @@ background:
     color: var(--trofeu-bronze);
 }
 
+.canto-inferior{
+    border: 1px solid brown;
+}
 
 .box3 {
-    height: 260px;
+    height: 445px;
     width: 780px;
     display: flex   ;
-    /* flex-direction: column; */
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    /* border: 2px solid wheat; */
+    /* border: 2px solid rgb(227, 95, 202); */
 }
 
 .box3 .historico {
-    height: 240px;
+    height: 200px;
     width: 760px;
     background: linear-gradient( 170deg ,
     var(--card-color-dark),
@@ -566,4 +574,59 @@ background:
 .box3 .historico .graphics canvas {
     width: 100% !important;
     height: 100% !important;
+}
+
+.box3 .chamadas-hora {
+    height: 200px;
+    width: 760px;
+    background: linear-gradient( 170deg ,
+    var(--card-color-dark),
+    var(--card-color-gradient));
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box3 .chamadas-hora .graphics {
+    height: 140px;
+    width: 800px;
+    padding: 0 12px 10px 12px;
+    /* border: 1px solid yellow; */
+}
+
+.box3 .chamadas-hora .graphics canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.box3 .chamadas-hora {
+    position: relative;
+}
+
+.box3 .chamadas-hora .horario-atividade {
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid green; */
+}
+
+.box3 .chamadas-hora .horario-atividade p{
+    color: white;
+    font-size: 8px;
+    opacity: 0.8;
+}
+
+.box3 .chamadas-hora .horario-atividade strong {
+    display: block;
+    font-size: 15px;
+    opacity: 1;
 }

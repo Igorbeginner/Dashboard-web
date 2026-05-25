@@ -239,3 +239,54 @@ new Chart(niveisChamados, {
         }
     }
 });
+
+
+const chamadasHora = document.getElementById('chamadas-hora');
+
+new Chart(chamadasHora, {
+    type: 'bar',
+    data: {
+        labels: ['7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'],
+        datasets: [{
+            data: [2800, 3900, 4600, 5000, 6100, 7600, 8300, 8300, 5800, 6700, 6200, 3000],
+            backgroundColor: '#FFFFFF',
+            borderWidth: 0,
+            barThickness: 16
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        },
+        scales: {
+            x: {
+                grid: { display: false },
+                ticks: {
+                    color: '#FFFFFF',
+                    font: { size: 11 }
+                },
+                border: { color: '#FFFFFF' }
+            },
+            y: {
+                min: 1000,
+                max: 9000,
+                ticks: {
+                    stepSize: 1000,
+                    autoSkip: false,
+                    color: '#FFFFFF',
+                    font: {
+                        size: 8
+                    },
+                    callback: function(value) {
+                        return value.toLocaleString('pt-BR');
+                    }
+                },
+                grid: { display: false },
+                border: { display: false }
+            }
+        }
+    }
+});
