@@ -8,4 +8,4 @@ A dashboard foi inspirada na imagem abaixo:
 
 Visualização final do projeto na minha tela:
 
-![Resultado da dashboard](resultado-final-na-minha-tela.png)
+![Resultado da dashboard](Resultado-final-na-minha-tela.png)
