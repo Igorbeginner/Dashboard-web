@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* pegue todos o width e faça x1,3 depois */
 
 :root{
     /* text and info */
@@ -85,12 +84,21 @@ body{
 width: 39px;
 min-height: 180px;
 margin-top: 10px;
-border-top: 1px solid white ;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 15px;
+}
+
+.sidebar .menu .linha{
+    width: 30px;
+    height: 1px;
+    margin-bottom: 15px;
+    background: radial-gradient( 
+        ellipse, 
+        white, 
+        rgb(255, 255, 255,0.1) );
 }
 
 .sidebar .menu > div{
@@ -114,8 +122,6 @@ gap: 15px;
     display: flex;
     align-items: center;
     gap: 30px;
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
 }
 
 .tittle {
@@ -125,7 +131,6 @@ gap: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* border: 1px solid red; */
 }
 
 .box1 {
@@ -135,15 +140,14 @@ gap: 15px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid white; */
 }
 
 .box1 .cards-info {
     height: 490px;
     width: 286px;
     background: linear-gradient(90deg,
-    var(--card-color-dark) 30%,
-    rgba(4, 12, 41.5, 0.7 ) 50%);
+        var(--card-color-dark) 30%,
+        rgba(4, 12, 41.5, 0.7 ) 50%);
     border-radius: 6%;
     display: flex;
     flex-direction: column;
@@ -188,7 +192,6 @@ background:
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    /* border: 1px solid green; */
 }
 
 .box1 .cards-info .card1 .piece2{
@@ -199,7 +202,6 @@ background:
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid rgb(255, 0, 25); */
 }
 
 /* Por fins estéticos, pedi para o chat fazer essa parte */
@@ -222,7 +224,6 @@ background:
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /* border: 1px solid salmon; */
 }
 
 .box1 .cards-info .card1 .piece2 .icon span {
@@ -302,7 +303,6 @@ background:
     justify-content: space-between;
     align-items: center; 
     flex-wrap: wrap;
-    /* border: 2px solid rgb(30, 152, 73); */
 }
 
 .box2{
@@ -311,7 +311,6 @@ background:
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid rgb(217, 182, 41); */
 }
 
 
@@ -327,7 +326,6 @@ background:
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid red; */
     }
 
 .box2 .visao-geral .graphics {
@@ -478,7 +476,6 @@ background:
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* border: 1px solid fuchsia; */
 }
 
 .box2 .top3 .info .dados .nome {
@@ -488,7 +485,6 @@ background:
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* border: 1px solid green; */
 }
 
 .box2 .top3 .info .dados .align-dados{
@@ -498,7 +494,6 @@ background:
     justify-content: center ;
     align-items: center;
     flex-wrap: wrap;
-    /* border: 1px solid yellow; */
 }
 
 
@@ -510,7 +505,6 @@ background:
     justify-content: space-between;
     align-items: center;
     border-right: 1px solid white ;
-    /* border: 1px solid red; */
 }
 
 .box2 .top3 .info .dados .align-dados .percentil {
@@ -519,8 +513,7 @@ background:
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
-    /* border: 1px solid rgb(255, 25, 0); */
+    align-items: center;
 }
 
 .box2 .top3 .info .dados .trofeu {
@@ -554,8 +547,6 @@ background:
     width: 1120px;
     display: flex;
     gap: 30px;
-    /* flex-wrap: wrap; */
-    /* border: 2px solid brown; */
 }
 
 .box3 {
@@ -565,7 +556,6 @@ background:
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid rgb(227, 95, 202); */
 }
 
 .box3 .historico {
@@ -609,7 +599,6 @@ background:
     height: 140px;
     width: 800px;
     padding: 0 12px 10px 12px;
-    /* border: 1px solid yellow; */
 }
 
 .box3 .chamadas-hora .graphics canvas {
@@ -631,7 +620,6 @@ background:
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* border: 1px solid green; */
 }
 
 .box3 .chamadas-hora .horario-atividade p{
@@ -652,7 +640,6 @@ background:
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid whitesmoke; */
 }
 
 .box4 .volume-chamadas {
@@ -665,7 +652,6 @@ background:
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid snow; */
 }
 
 
