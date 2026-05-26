@@ -110,16 +110,30 @@ gap: 15px;
 
 .dash {
     flex: 1; /* =ocupar toda o espaço livre | Junção do flex-grow, flex-shrink e fle-basis  */
+    margin-left: 20px;
     display: flex;
+    align-items: center;
+    gap: 30px;
+    /* justify-content: center; */
     /* flex-wrap: wrap; */
 }
 
+.tittle {
+    height: 40px;
+    width: 100%;
+    padding:10px 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+}
+
 .box1 {
-    width: 325px;
-    height: 100%;
+    height: 708px;
+    min-width: 285px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     /* border: 2px solid white; */
 }
@@ -281,33 +295,29 @@ background:
 }
 
 .area-maior {
-    height: 729px;
-    width: 1134px;
-    /* border: 3px solid rgb(30, 152, 73); */
+    height: 708px;
+    width: 1120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    /* border: 2px solid rgb(30, 152, 73); */
 }
 
 .box2{
-    height: 280px;
+    min-height: 255px;
     width: 1120px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     /* border: 2px solid rgb(217, 182, 41); */
 }
 
-.tittle {
-    height: 40px;
-    width: 100%;
-    padding:10px 0 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* border: 1px solid red; */
-}
 
 .box2 .visao-geral {
-    height: 250px;
-    width: 559px;
+    height: 255px;
+    width: 555px;
     background: linear-gradient(
         160deg,
         var(--sidebar-color-dark) 30%, 
@@ -540,26 +550,27 @@ background:
 }
 
 .canto-inferior{
-    height: 440px;
-    width: 1140px;
+    height: 430px;
+    width: 1120px;
     display: flex;
+    gap: 30px;
     /* flex-wrap: wrap; */
-    /* border: 1px solid brown; */
+    /* border: 2px solid brown; */
 }
 
 .box3 {
-    height: 440px;
-    width: 780px;
+    height: 431px;
+    width: 740px;
     display: flex   ;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     /* border: 2px solid rgb(227, 95, 202); */
 }
 
 .box3 .historico {
-    height: 200px;
-    width: 760px;
+    height: 211px;
+    width: 740px;
     background: linear-gradient( 170deg ,
     var(--card-color-dark),
     var(--card-color-gradient));
@@ -571,7 +582,7 @@ background:
 
 .box3 .historico .graphics {
     height: 180px;
-    width: 760px;
+    width: 740px;
     padding: 10px 20px;
 }
 
@@ -582,7 +593,7 @@ background:
 
 .box3 .chamadas-hora {
     height: 200px;
-    width: 760px;
+    width: 740px;
     background: linear-gradient( 170deg ,
     var(--card-color-dark),
     var(--card-color-gradient));
@@ -636,17 +647,17 @@ background:
 }
 
 .box4{
-    height: 440px;
-    width: 400px;
+    height: 430px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid whitesmoke; */
+    /* border: 2px solid whitesmoke; */
 }
 
 .box4 .volume-chamadas {
-    height: 420px;
-    width: 360px;
+    height: 430px;
+    width: 350px;
     background: linear-gradient( 130deg ,
     var(--card-color-dark)35%,
     var(--card-color-gradient)100%);
