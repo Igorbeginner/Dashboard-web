@@ -148,7 +148,7 @@ gap: 15px;
     background: linear-gradient(90deg,
         var(--card-color-dark) 30%,
         rgba(4, 12, 41.5, 0.7 ) 50%);
-    border-radius: 6%;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,7 +238,7 @@ background:
         var(--card-color-dark) 20%,
         var(--card-color-gradient) 70%
     );
-    border-radius: 12px;
+    border-radius: 6%;
     position: relative;
 }
 
