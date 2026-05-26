@@ -3,3 +3,9 @@
 A dashboard foi inspirada na imagem abaixo:
 
 ![texto alternativo](Referencia.jpeg)
+
+## Resultado final
+
+Visualização final do projeto na minha tela:
+
+![Resultado da dashboard](resultado-final-na-minha-tela.png)
