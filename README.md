@@ -1,1 +1,1 @@
-![texto alternativo] "Referencia.jpeg"
+![texto alternativo](Referencia.jpeg)
